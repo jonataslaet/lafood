@@ -1,3 +1,5 @@
+#LaFood
+
 ### Introdução
 Aplicação para gerenciamento de pratos de comidas, desenvolvido inicialmente em três módulos: Cadastro, Marketplace e Pedidos.
 
