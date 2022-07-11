@@ -1,4 +1,4 @@
-package com.github.jonataslaet.lafood.cadastro;
+package com.github.jonataslaet.lafood.cadastro.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -9,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 public class HelloResource {
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public String hello() {
         return "Hello from RESTEasy Reactive";
     }
