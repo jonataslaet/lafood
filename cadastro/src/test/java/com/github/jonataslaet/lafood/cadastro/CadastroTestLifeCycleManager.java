@@ -2,9 +2,7 @@ package com.github.jonataslaet.lafood.cadastro;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import org.testcontainers.containers.PostgreSQLContainer;
-
 import io.quarkus.test.common.QuarkusTestResourceConfigurableLifecycleManager;
 
 public class CadastroTestLifeCycleManager implements QuarkusTestResourceConfigurableLifecycleManager {
@@ -13,6 +11,7 @@ public class CadastroTestLifeCycleManager implements QuarkusTestResourceConfigur
 	@Override
 	public Map<String, String> start() {
 		POSTGRES.start();
+
 		Map<String, String> propriedades = new HashMap<String, String>();
 		
 		propriedades.put("quarkus.datasource.url", POSTGRES.getJdbcUrl());

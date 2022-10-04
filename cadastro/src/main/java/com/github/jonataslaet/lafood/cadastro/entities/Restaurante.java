@@ -25,6 +25,8 @@ public class Restaurante extends PanacheEntityBase {
 
 	public String proprietario;
 
+	public String nome;
+
 	public String cnpj;
 
 	@ManyToOne(cascade = CascadeType.PERSIST)

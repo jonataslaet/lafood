@@ -1,0 +1,1 @@
+[{"cnpj":"05510256389","id":123,"nome":"Novo Restaurante 01","proprietario":"ID do keycloak 01"},{"cnpj":"05510256389","id":321,"nome":"Novo Restaurante 02","proprietario":"ID do keycloak 02"}]
