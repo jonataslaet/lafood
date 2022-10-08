@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -43,7 +44,7 @@ public class RestauranteResource {
     
     @POST
     @Transactional
-    public Response adicionar(RestauranteInputDto restauranteInputDto) {
+    public Response adicionar(@Valid RestauranteInputDto restauranteInputDto) {
         restauranteMapper.toRestauranteEntity(restauranteInputDto).persist();
     	return Response.status(Status.CREATED).build();
     }
@@ -51,7 +52,7 @@ public class RestauranteResource {
     @PUT
     @Path("{id}")
     @Transactional
-    public Response atualizar(@PathParam("id") Long id, RestauranteInputDto restauranteDto) {
+    public Response atualizar(@PathParam("id") Long id, @Valid RestauranteInputDto restauranteDto) {
     	Optional<Restaurante> restauranteOptional = Restaurante.findByIdOptional(id);
     	if (restauranteOptional.isEmpty()) {
     		throw new NotFoundException();
